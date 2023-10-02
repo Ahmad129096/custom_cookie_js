@@ -56,6 +56,18 @@ body {
   }
 }
 
+.ck-logo {
+  width: 116px;
+  height: 32px;
+}
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  .ck-logo {
+    width: 57.93px;
+    height: 16.55px;
+    margin-bottom: 4px;
+  }
+}
+
 .ck-cookie-bar {
   bottom: 0;
   left: 50%;
@@ -197,12 +209,15 @@ body {
 }
 .ck-custom-modal-title {
   font-size: 20px;
+  width: 338px;
   color: #404040;
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {
   .ck-custom-modal-title {
     font-size: 16px;
+    width: 202px;
+    height: 18px;
   }
 }
 .ck-custom-modal-content {
