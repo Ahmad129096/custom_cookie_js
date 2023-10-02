@@ -32,7 +32,7 @@
         <button
           class="custom-botton conf-btn"
           data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
+          data-bs-target="#cookieModal"
         >
           Configurar cookies
         </button>
@@ -41,7 +41,7 @@
         </button>
       </div>
     </div>
-    <div class="modal" tabindex="-1" id="exampleModal">
+    <div class="modal fade" tabindex="-1" id="cookieModal">
       <div class="modal-dialog">
         <div class="modal-content custom-modal-content">
           <div class="modal-header custom-modal-header">
@@ -235,6 +235,7 @@
                 Rechazar todas
               </button>
               <button
+                data-bs-dismiss="modal"
                 id="acceptCustomizationsBtn"
                 class="custom-botton guarder-btn"
               >
