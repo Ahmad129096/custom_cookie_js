@@ -106,9 +106,12 @@ document
 // Event listener for Accept All button click
 document.getElementById("acceptAllBtn").addEventListener("click", function () {
   document.getElementById("cookieBanner").style.display = "none";
-  setCookie("cookieStrictlyNecessary", "granted"); // Strictly necessary cookie
-  setCookie("analytics_storage", "granted");
   setCookie("ad_storage", "granted");
+  setCookie("security_storage", "denied");
+  setCookie("analytics_storage", "granted");
+  setCookie("functionality_storage", "denied");
+  setCookie("personalization_storage", "denied");
+  setCookie("cookieStrictlyNecessary", "granted"); // Strictly necessary cookie
 
   // Set main consent cookie after accepting all cookies
   setCookie("cookie_consent", "true");
