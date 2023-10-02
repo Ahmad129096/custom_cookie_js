@@ -10,7 +10,7 @@ arr.forEach((accord, index) => {
 });
 
 function hasAcceptedCookies() {
-  return document.cookie.indexOf("cookieConsent=true") !== -1;
+  return document.cookie.indexOf("cookie_consent=true") !== -1;
 }
 
 // Check if user has already accepted cookies
@@ -18,9 +18,7 @@ if (hasAcceptedCookies()) {
   // Call GTM to handle accepted cookies
   document.getElementById("cookieBanner").style.display = "none";
   window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    event: "cookiesAccepted",
-  });
+  window.dataLayer.push({ event: "consent_update" });
 }
 
 // switches for marketing and statistics
@@ -53,56 +51,69 @@ function setCookie(cname, cvalue) {
 document
   .getElementById("rejectCustomizationsBtn")
   .addEventListener("click", function () {
-    setCookie("cookieStrictlyNecessary", "true"); // Strictly necessary cookie
+    setCookie("ad_storage", "denied");
+    setCookie("security_storage", "denied");
+    setCookie("analytics_storage", "denied");
+    setCookie("functionality_storage", "denied");
+    setCookie("personalization_storage", "denied");
+    setCookie("cookieStrictlyNecessary", "granted");
 
     document.getElementById("cookieBanner").style.display = "none";
 
     // Set main consent cookie after customizations are accepted
-    setCookie("cookieConsent", "true"); // Cookie expires in 1 year
+    setCookie("cookie_consent", "true");
 
     // Call GTM to handle accepted cookies
     window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: "cookiesAccepted",
-    });
+    window.dataLayer.push({ event: "consent_update" });
   });
 
 document
   .getElementById("acceptCustomizationsBtn")
   .addEventListener("click", function () {
-    if (userAcceptsStatistics) {
-      setCookie("cookieStatistics", "true"); // Cookie expires in 1 year
+    if (userAcceptsStatistics && userAcceptsMarketing) {
+      window.dataLayer.push({
+        event: "virtualPageGA4",
+        pagePath: "{{pagePath}}",
+        pageTitle: "{{pageTitle}}",
+      });
     }
-    if (userAcceptsMarketing) {
-      setCookie("cookieMarketing", "true"); // Cookie expires in 1 year
-    }
-    setCookie("cookieStrictlyNecessary", "true"); // Strictly necessary cookie
+
+    // statistic cookies
+    if (userAcceptsStatistics) setCookie("analytics_storage", "granted");
+    else setCookie("analytics_storage", "denied");
+
+    // marketing cookies
+    if (userAcceptsMarketing) setCookie("ad_storage", "granted");
+    else setCookie("ad_storage", "denied");
+
+    setCookie("cookieStrictlyNecessary", "granted"); // Strictly necessary cookie
+
     document.getElementById("cookieBanner").style.display = "none";
 
     // Set main consent cookie after customizations are accepted
-    setCookie("cookieConsent", "true"); // Cookie expires in 1 year
+    setCookie("cookie_consent", "true");
+    setCookie("functionality_storage", "denied");
+    setCookie("personalization_storage", "denied");
+    setCookie("security_storage", "denied");
 
     // Call GTM to handle accepted cookies
     window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: "cookiesAccepted",
-    });
+    window.dataLayer.push({ event: "consent_update" });
   });
 // });
 
 // Event listener for Accept All button click
 document.getElementById("acceptAllBtn").addEventListener("click", function () {
   document.getElementById("cookieBanner").style.display = "none";
-  setCookie("cookieStrictlyNecessary", "true"); // Strictly necessary cookie
-  setCookie("cookieStatistics", "true"); // Cookie expires in 1 year
-  setCookie("cookieMarketing", "true"); // Cookie expires in 1 year
+  setCookie("cookieStrictlyNecessary", "granted"); // Strictly necessary cookie
+  setCookie("analytics_storage", "granted");
+  setCookie("ad_storage", "granted");
 
   // Set main consent cookie after accepting all cookies
-  setCookie("cookieConsent", "true"); // Cookie expires in 1 year
+  setCookie("cookie_consent", "true");
 
   // Call GTM to handle accepted cookies
   window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    event: "cookiesAccepted",
-  });
+  window.dataLayer.push({ event: "consent_update" });
 });
