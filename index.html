@@ -19,38 +19,38 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div class="cookie-bar bg-white shadow-lg z-50" id="cookieBanner">
+    <div class="ck-cookie-bar shadow-lg z-50" id="cookieBanner">
       <div>
-        <p class="cookie-paragraph">
+        <p class="ck-cookie-paragraph">
           Al hacer clic en “Aceptar”, aceptas que nuestras cookies se guarden en
           tu dispositivo para mejorar la navegación del sitio, analizar su uso,
           y colaborar con nuestros estudios de marketing. También puedes
           configurarlas.
         </p>
       </div>
-      <div class="btn-container d-flex">
+      <div class="ck-btn-container d-flex">
         <button
-          class="custom-botton conf-btn"
+          class="ck-custom-botton ck-conf-btn"
           data-bs-toggle="modal"
           data-bs-target="#cookieModal"
         >
           Configurar cookies
         </button>
-        <button id="acceptAllBtn" class="custom-botton accept-btn">
+        <button id="acceptAllBtn" class="ck-custom-botton ck-accept-btn">
           Aceptar todas
         </button>
       </div>
     </div>
     <div class="modal fade" tabindex="-1" id="cookieModal">
       <div class="modal-dialog">
-        <div class="modal-content custom-modal-content">
-          <div class="modal-header custom-modal-header">
-            <h5 class="custom-modal-title">Configuración de Cookies</h5>
+        <div class="modal-content ck-custom-modal-content">
+          <div class="modal-header ck-custom-modal-header">
+            <h5 class="ck-custom-modal-title">Configuración de Cookies</h5>
             <span>Logo</span>
           </div>
 
           <div class="modal-body">
-            <p class="main-text">
+            <p class="ck-main-text">
               Nuestros sitios web podrían obtener o guardar información en tu
               navegador, mediante el uso de cookies. Respetando tu derecho a la
               privacidad, puedes escoger no permitirnos usar ciertas cookies,
@@ -70,12 +70,14 @@
                     aria-expanded="false"
                     aria-controls="flush-collapseOne"
                   >
-                    <label class="color-gray"> Estrictamente necesarias </label>
-                    <div class="switch-arrow">
-                      <label class="Siempre-label"> Siempre activas </label>
+                    <label class="ck-color-gray">
+                      Estrictamente necesarias
+                    </label>
+                    <div class="ck-switch-arrow">
+                      <label class="ck-siempre-label"> Siempre activas </label>
                       <svg
                         id="arrow"
-                        class="accord arrow-1"
+                        class="accord ck-arrow-1"
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
                         height="16"
@@ -117,24 +119,24 @@
                     aria-expanded="false"
                     aria-controls="flush-collapseTwo"
                   >
-                    <label class="color-gray"> Estadísticas </label>
-                    <div class="switch-arrow">
-                      <div class="switch-container">
-                        <div class="switch">
+                    <label class="ck-color-gray"> Estadísticas </label>
+                    <div class="ck-switch-arrow">
+                      <div class="ck-switch-container">
+                        <div class="ck-switch">
                           <input
                             id="userAcceptsStatistics"
                             type="checkbox"
-                            class="switch-input"
+                            class="ck-switch-input"
                           />
                           <label
                             for="userAcceptsStatistics"
-                            class="switch-label"
+                            class="ck-switch-label"
                           ></label>
                         </div>
                       </div>
                       <svg
                         id="arrow"
-                        class="accord arrow-2"
+                        class="accord ck-arrow-2"
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
                         height="16"
@@ -174,24 +176,24 @@
                     aria-expanded="false"
                     aria-controls="flush-collapseThree"
                   >
-                    <label class="color-gray"> Marketing </label>
-                    <div class="switch-arrow">
-                      <div class="switch-container">
-                        <div class="switch">
+                    <label class="ck-color-gray"> Marketing </label>
+                    <div class="ck-switch-arrow">
+                      <div class="ck-switch-container">
+                        <div class="ck-switch">
                           <input
                             id="userAcceptsMarketing"
                             type="checkbox"
-                            class="switch-input"
+                            class="ck-switch-input"
                           />
                           <label
                             for="userAcceptsMarketing"
-                            class="switch-label"
+                            class="ck-switch-label"
                           ></label>
                         </div>
                       </div>
                       <svg
                         id="arrow"
-                        class="accord arrow-3"
+                        class="accord ck-arrow-3"
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
                         height="16"
@@ -226,10 +228,10 @@
           </div>
 
           <div class="modal-footer">
-            <div class="modal-btns d-flex">
+            <div class="ck-modal-btns d-flex">
               <button
                 id="rejectCustomizationsBtn"
-                class="custom-botton rechazar-btn"
+                class="ck-custom-botton ck-rechazar-btn"
                 data-bs-dismiss="modal"
               >
                 Rechazar todas
@@ -237,7 +239,7 @@
               <button
                 data-bs-dismiss="modal"
                 id="acceptCustomizationsBtn"
-                class="custom-botton guarder-btn"
+                class="ck-custom-botton ck-guarder-btn"
               >
                 Guardar cambios
               </button>

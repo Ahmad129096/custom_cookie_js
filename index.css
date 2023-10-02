@@ -1,16 +1,3 @@
-.animate-slide-in {
-  animation: slideIn 1s ease-out;
-}
-
-@keyframes slideIn {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
 /* Hide the default scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -49,16 +36,16 @@ p {
 body {
   font-family: "Roboto", sans-serif;
 }
-.color-white {
+.ck-color-white {
   color: #ffffff;
 }
 .color-black {
   color: #000000;
 }
-.color-gray {
+.ck-color-gray {
   color: #404040;
 }
-.color-lightgray {
+.ck-color-lightgray {
   color: #ccccd6;
 }
 
@@ -69,7 +56,7 @@ body {
   }
 }
 
-.cookie-bar {
+.ck-cookie-bar {
   bottom: 0;
   left: 50%;
   height: 80px;
@@ -78,32 +65,33 @@ body {
   position: fixed;
   padding: 16px 16px;
   align-items: center;
+  background-color: #ffffff;
   transform: translateX(-50%);
   border-radius: 8px 8px 0px 0px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .cookie-bar {
+  .ck-cookie-bar {
     width: 100%;
     height: 120px;
     justify-content: space-around;
   }
 }
 @media screen and (min-width: 720px) and (max-width: 1200px) {
-  .cookie-bar {
+  .ck-cookie-bar {
     width: 100%;
     height: 100px;
     justify-content: space-around;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 720px) {
-  .cookie-bar {
+  .ck-cookie-bar {
     width: 100%;
     height: 20%;
     justify-content: space-around;
   }
 }
-.cookie-paragraph {
+.ck-cookie-paragraph {
   width: 706px;
   height: 32px;
   color: #404040;
@@ -112,28 +100,28 @@ body {
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .cookie-paragraph {
+  .ck-cookie-paragraph {
     width: 170px;
     height: 91px;
     font-size: 11px;
   }
 }
 @media screen and (min-width: 720px) and (max-width: 1200px) {
-  .cookie-paragraph {
+  .ck-cookie-paragraph {
     width: 100%;
     height: 50px;
     font-size: 13px;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 720px) {
-  .cookie-paragraph {
+  .ck-cookie-paragraph {
     width: 100%;
     height: 60px;
     font-size: 11px;
   }
 }
 
-.custom-botton {
+.ck-custom-botton {
   width: 200px;
   height: 48px;
   font-size: 14px;
@@ -142,22 +130,22 @@ body {
   border: 1px solid #000000;
 }
 
-.conf-btn {
+.ck-conf-btn {
   background-color: transparent;
 }
-.rechazar-btn {
+.ck-rechazar-btn {
   background-color: transparent;
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .rechazar-btn {
+  .ck-rechazar-btn {
     width: 110px;
     height: 36px;
     font-size: 11px;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .conf-btn {
+  .ck-conf-btn {
     width: 110px;
     height: 36px;
     font-size: 11px;
@@ -165,19 +153,19 @@ body {
 }
 
 @media screen and (min-width: 600px) and (max-width: 720px) {
-  .conf-btn {
+  .ck-conf-btn {
     width: 120px;
     height: 36px;
     font-size: 11px;
   }
 }
-.accept-btn {
+.ck-accept-btn {
   margin-left: 20px;
   background: #000000;
   color: #ffffff;
 }
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .accept-btn {
+  .ck-accept-btn {
     width: 110px;
     height: 36px;
     font-size: 11px;
@@ -186,20 +174,20 @@ body {
   }
 }
 @media screen and (min-width: 600px) and (max-width: 720px) {
-  .accept-btn {
+  .ck-accept-btn {
     width: 120px;
     height: 36px;
     font-size: 11px;
   }
 }
 
-.btn-container {
+.ck-btn-container {
   margin-left: 30px;
   width: 416px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .btn-container {
+  .ck-btn-container {
     width: 110px;
     height: 90px;
     font-size: 11px;
@@ -207,35 +195,35 @@ body {
     margin-left: 8px;
   }
 }
-.custom-modal-title {
+.ck-custom-modal-title {
   font-size: 20px;
   color: #404040;
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .custom-modal-title {
+  .ck-custom-modal-title {
     font-size: 16px;
   }
 }
-.custom-modal-content {
+.ck-custom-modal-content {
   padding: 24px;
   width: 562px;
   height: 424px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .custom-modal-content {
+  .ck-custom-modal-content {
     width: 100%;
     height: 392px;
     padding: 20px;
   }
 }
-.custom-modal-header {
+.ck-custom-modal-header {
   padding: 0px 0px 10px 0px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .custom-modal-header {
+  .ck-custom-modal-header {
     flex-direction: column-reverse;
     align-items: start;
     padding: 0px 0px 9px 0px;
@@ -243,7 +231,7 @@ body {
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .custom-modal-header > h5 {
+  .ck-custom-modal-header > h5 {
     margin-bottom: 0px;
   }
 }
@@ -264,13 +252,13 @@ body {
     overflow-x: hidden;
   }
 }
-.modal-body > .main-text {
+.modal-body > .ck-main-text {
   font-size: 14px;
   line-height: normal;
   color: #404040;
 }
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .modal-body > .main-text {
+  .modal-body > .ck-main-text {
     font-size: 11px;
   }
 }
@@ -311,36 +299,36 @@ label {
   }
 }
 
-.Siempre-label {
+.ck-siempre-label {
   color: #000000;
   font-weight: 500;
   padding-right: 8px;
 }
-.arrow-icon {
+.ck-arrow-icon {
   transform: rotate(180deg);
 }
 
 .accord {
   transition: transform 0.2s ease;
 }
-.switch {
+.ck-switch {
   position: relative;
   width: 60px;
   height: 30px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .switch {
+  .ck-switch {
     width: 45px;
     height: 25px;
   }
 }
 
-.switch-input {
+.ck-switch-input {
   display: none;
 }
 
-.switch-label {
+.ck-switch-label {
   width: 100%;
   height: 100%;
   background: #ccc; /* Default background color */
@@ -351,11 +339,11 @@ label {
   transition: background 0.3s;
 }
 
-.switch-input:checked + .switch-label {
+.ck-switch-input:checked + .ck-switch-label {
   background: black; /* Background color when checked */
 }
 
-.switch-label::before {
+.ck-switch-label::before {
   content: "";
   width: 26px;
   height: 26px;
@@ -368,55 +356,55 @@ label {
 }
 @media screen and (min-width: 320px) and (max-width: 600px) {
   /* Custom switch ball size for screens with a width of 320 pixels or less */
-  .switch-label::before {
+  .ck-switch-label::before {
     width: 21px; /* Updated ball size */
     height: 21px; /* Updated ball size */
   }
 }
 
-.switch-input:checked + .switch-label::before {
+.ck-switch-input:checked + .ck-switch-label::before {
   left: 32px; /* Position of the ball when checked */
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .switch-input:checked + .switch-label::before {
+  .ck-switch-input:checked + .ck-switch-label::before {
     left: 22px; /* Position of the ball when checked */
   }
 }
 
-.switch-arrow {
+.ck-switch-arrow {
   display: flex;
   align-items: center;
 }
 
-.switch-container {
+.ck-switch-container {
   padding-right: 28px;
 }
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .switch-container {
+  .ck-switch-container {
     padding-right: 23px;
   }
 }
-.modal-btns {
+.ck-modal-btns {
   width: 418px;
   padding: 0px;
   margin: 0px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .modal-btns {
+  .ck-modal-btns {
     justify-content: space-around;
   }
 }
 
-.guarder-btn {
+.ck-guarder-btn {
   margin-left: 16px;
   background: #000000;
   color: #ffffff;
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .guarder-btn {
+  .ck-guarder-btn {
     width: 110px;
     height: 36px;
     font-size: 11px;

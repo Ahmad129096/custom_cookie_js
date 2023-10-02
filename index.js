@@ -3,9 +3,9 @@ let userAcceptsStatistics = false;
 let userAcceptsMarketing = false;
 
 arr.forEach((accord, index) => {
-  const arrow = accord.querySelector(`.arrow-${index + 1}`);
+  const arrow = accord.querySelector(`.ck-arrow-${index + 1}`);
   accord.addEventListener("click", () => {
-    arrow.classList.toggle("arrow-icon");
+    arrow.classList.toggle("ck-arrow-icon");
   });
 });
 
@@ -23,6 +23,8 @@ if (hasAcceptedCookies()) {
   });
 }
 
+// switches for marketing and statistics
+
 document
   .getElementById("userAcceptsStatistics")
   .addEventListener("change", function (e) {
@@ -37,28 +39,26 @@ document
   });
 
 // Function to set a cookie with a specific name, value, and expiration time in days
-function setCookie(name, value, days) {
-  var expires = "";
-  if (days) {
-    var date = new Date();
-    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-    expires = "; expires=" + date.toUTCString();
-  }
-  document.cookie = name + "=" + value + expires + "; path=/";
+function setCookie(cname, cvalue) {
+  var now = new Date();
+  var time = now.getTime();
+  var expireTime = time + 1000 * 36000;
+  now.setTime(expireTime);
+  document.cookie =
+    cname + "=" + cvalue + ";expires=" + now.toUTCString() + "; path=/";
 }
 
-// Function to check if the user has accepted cookies
+// Function to check if the user has rejected the cookies
 
 document
   .getElementById("rejectCustomizationsBtn")
   .addEventListener("click", function () {
-    console.log(" i am called");
-    setCookie("cookieStrictlyNecessary", "true", 365); // Strictly necessary cookie
+    setCookie("cookieStrictlyNecessary", "true"); // Strictly necessary cookie
 
     document.getElementById("cookieBanner").style.display = "none";
 
     // Set main consent cookie after customizations are accepted
-    setCookie("cookieConsent", "true", 365); // Cookie expires in 1 year
+    setCookie("cookieConsent", "true"); // Cookie expires in 1 year
 
     // Call GTM to handle accepted cookies
     window.dataLayer = window.dataLayer || [];
@@ -71,16 +71,16 @@ document
   .getElementById("acceptCustomizationsBtn")
   .addEventListener("click", function () {
     if (userAcceptsStatistics) {
-      setCookie("cookieStatistics", "true", 365); // Cookie expires in 1 year
+      setCookie("cookieStatistics", "true"); // Cookie expires in 1 year
     }
     if (userAcceptsMarketing) {
-      setCookie("cookieMarketing", "true", 365); // Cookie expires in 1 year
+      setCookie("cookieMarketing", "true"); // Cookie expires in 1 year
     }
-    setCookie("cookieStrictlyNecessary", "true", 365); // Strictly necessary cookie
+    setCookie("cookieStrictlyNecessary", "true"); // Strictly necessary cookie
     document.getElementById("cookieBanner").style.display = "none";
 
     // Set main consent cookie after customizations are accepted
-    setCookie("cookieConsent", "true", 365); // Cookie expires in 1 year
+    setCookie("cookieConsent", "true"); // Cookie expires in 1 year
 
     // Call GTM to handle accepted cookies
     window.dataLayer = window.dataLayer || [];
@@ -93,12 +93,12 @@ document
 // Event listener for Accept All button click
 document.getElementById("acceptAllBtn").addEventListener("click", function () {
   document.getElementById("cookieBanner").style.display = "none";
-  setCookie("cookieStrictlyNecessary", "true", 365); // Strictly necessary cookie
-  setCookie("cookieStatistics", "true", 365); // Cookie expires in 1 year
-  setCookie("cookieMarketing", "true", 365); // Cookie expires in 1 year
+  setCookie("cookieStrictlyNecessary", "true"); // Strictly necessary cookie
+  setCookie("cookieStatistics", "true"); // Cookie expires in 1 year
+  setCookie("cookieMarketing", "true"); // Cookie expires in 1 year
 
   // Set main consent cookie after accepting all cookies
-  setCookie("cookieConsent", "true", 365); // Cookie expires in 1 year
+  setCookie("cookieConsent", "true"); // Cookie expires in 1 year
 
   // Call GTM to handle accepted cookies
   window.dataLayer = window.dataLayer || [];
