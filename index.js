@@ -74,10 +74,8 @@ document
     if (userAcceptsStatistics && userAcceptsMarketing) {
       window.dataLayer.push({
         event: "virtualPageGA4",
-        pagePath:
-          `${window.location.pathname}` +
-          `${window.location.search && window.location.search}`,
-        pageTitle: document.title,
+        pagePath: "{{pagePath}}",
+        pageTitle: "{{pageTitle}}",
       });
     }
 

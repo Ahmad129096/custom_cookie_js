@@ -30,12 +30,10 @@
   background: #f1f1f1;
 }
 
-p {
-  margin: 0;
-}
-body {
+.ck-font-family {
   font-family: "Roboto", sans-serif;
 }
+
 .ck-color-white {
   color: #ffffff;
 }
@@ -277,38 +275,38 @@ body {
     font-size: 11px;
   }
 }
-.accordion {
+.ck-accordion {
   border: 1px solid #ccccd6;
   margin-top: 16px;
 }
 
-.accordion-header {
+.ck-accordion-header {
   cursor: pointer;
 }
-.accordion-header > div,
+.ck-accordion-header > div,
 label {
   cursor: pointer;
 }
-.accordion-header > .coll {
+.ck-accordion-header > .ck-coll {
   font-size: 14px;
   padding: 16px;
   align-items: center;
   justify-content: space-between;
 }
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .accordion-header > .coll {
+  .ck-accordion-header > .ck-coll {
     font-size: 11px;
     padding: 9px;
   }
 }
-.accordion-body {
+.ck-accordion-body {
   font-size: 14px;
   padding: 16px;
   line-height: normal;
   color: #404040;
 }
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .accordion-body {
+  .ck-accordion-body {
     font-size: 11px;
     padding: 9px;
   }
@@ -323,7 +321,7 @@ label {
   transform: rotate(180deg);
 }
 
-.accord {
+.ck-accord {
   transition: transform 0.2s ease;
 }
 .ck-switch {
@@ -427,13 +425,13 @@ label {
   }
 }
 
-.modal-footer {
+.ck-modal-footer {
   padding: 16px 0px 0px 0px;
   margin: 0px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .modal-footer {
+  .ck-modal-footer {
     padding: 13px 0px 0px 0px;
   }
 }
