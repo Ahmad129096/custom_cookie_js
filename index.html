@@ -63,9 +63,11 @@
               id="accordionFlushExample"
             >
               <div class="accordion-item">
-                <div class="accordion-header ck-accordion-header">
+                <div
+                  id="main-accord"
+                  class="accordion-header ck-accordion-header d-flex"
+                >
                   <div
-                    id="main-accord"
                     class="collapsed d-flex ck-coll"
                     type="button"
                     data-bs-toggle="collapse"
@@ -76,25 +78,34 @@
                     <label class="ck-color-gray">
                       Estrictamente necesarias
                     </label>
-                    <div class="ck-switch-arrow">
-                      <label class="ck-siempre-label"> Siempre activas </label>
-                      <svg
-                        id="arrow"
-                        class="accord ck-accord ck-arrow-1"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                      >
-                        <path
-                          d="M2 5C2 5 7.65625 11 8 11C8.34375 11 14 5 14 5"
-                          stroke="#404040"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                        />
-                      </svg>
-                    </div>
+                  </div>
+                  <div class="ck-switch-arrow">
+                    <label
+                      class="ck-siempre-label"
+                      onclick="event.stopPropagation()"
+                    >
+                      Siempre activas
+                    </label>
+                    <svg
+                      id="arrow"
+                      aria-expanded="false"
+                      data-bs-toggle="collapse"
+                      aria-controls="flush-collapseOne"
+                      data-bs-target="#flush-collapseOne"
+                      class="accord ck-accord ck-arrow-1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                    >
+                      <path
+                        d="M2 5C2 5 7.65625 11 8 11C8.34375 11 14 5 14 5"
+                        stroke="#404040"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                    </svg>
                   </div>
                 </div>
                 <div
@@ -112,9 +123,11 @@
                 </div>
               </div>
               <div class="accordion-item">
-                <div class="accordion-header ck-accordion-header">
+                <div
+                  id="main-accord"
+                  class="accordion-header ck-accordion-header d-flex"
+                >
                   <div
-                    id="main-accord"
                     class="collapsed d-flex ck-coll"
                     type="button"
                     data-bs-toggle="collapse"
@@ -123,37 +136,41 @@
                     aria-controls="flush-collapseTwo"
                   >
                     <label class="ck-color-gray"> Estadísticas </label>
-                    <div class="ck-switch-arrow">
-                      <div class="ck-switch-container">
-                        <div class="ck-switch">
-                          <input
-                            id="userAcceptsStatistics"
-                            type="checkbox"
-                            class="ck-switch-input"
-                          />
-                          <label
-                            for="userAcceptsStatistics"
-                            class="ck-switch-label"
-                          ></label>
-                        </div>
-                      </div>
-                      <svg
-                        id="arrow"
-                        class="accord ck-accord ck-arrow-2"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                      >
-                        <path
-                          d="M2 5C2 5 7.65625 11 8 11C8.34375 11 14 5 14 5"
-                          stroke="#404040"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
+                  </div>
+                  <div class="ck-switch-arrow">
+                    <div class="ck-switch-container">
+                      <div class="ck-switch">
+                        <input
+                          id="userAcceptsStatistics"
+                          type="checkbox"
+                          class="ck-switch-input"
                         />
-                      </svg>
+                        <label
+                          for="userAcceptsStatistics"
+                          class="ck-switch-label"
+                        ></label>
+                      </div>
                     </div>
+                    <svg
+                      id="arrow"
+                      aria-expanded="false"
+                      data-bs-toggle="collapse"
+                      aria-controls="flush-collapseTwo"
+                      data-bs-target="#flush-collapseTwo"
+                      class="accord ck-accord ck-arrow-2"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                    >
+                      <path
+                        d="M2 5C2 5 7.65625 11 8 11C8.34375 11 14 5 14 5"
+                        stroke="#404040"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                    </svg>
                   </div>
                 </div>
                 <div
@@ -169,9 +186,11 @@
                 </div>
               </div>
               <div class="accordion-item">
-                <div class="accordion-header ck-accordion-header">
+                <div
+                  id="main-accord"
+                  class="accordion-header ck-accordion-header d-flex"
+                >
                   <div
-                    id="main-accord"
                     class="collapsed d-flex ck-coll"
                     type="button"
                     data-bs-toggle="collapse"
@@ -180,37 +199,41 @@
                     aria-controls="flush-collapseThree"
                   >
                     <label class="ck-color-gray"> Marketing </label>
-                    <div class="ck-switch-arrow">
-                      <div class="ck-switch-container">
-                        <div class="ck-switch">
-                          <input
-                            id="userAcceptsMarketing"
-                            type="checkbox"
-                            class="ck-switch-input"
-                          />
-                          <label
-                            for="userAcceptsMarketing"
-                            class="ck-switch-label"
-                          ></label>
-                        </div>
-                      </div>
-                      <svg
-                        id="arrow"
-                        class="accord ck-accord ck-arrow-3"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                      >
-                        <path
-                          d="M2 5C2 5 7.65625 11 8 11C8.34375 11 14 5 14 5"
-                          stroke="#404040"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
+                  </div>
+                  <div class="ck-switch-arrow">
+                    <div class="ck-switch-container">
+                      <div class="ck-switch">
+                        <input
+                          id="userAcceptsMarketing"
+                          type="checkbox"
+                          class="ck-switch-input"
                         />
-                      </svg>
+                        <label
+                          for="userAcceptsMarketing"
+                          class="ck-switch-label"
+                        ></label>
+                      </div>
                     </div>
+                    <svg
+                      id="arrow"
+                      aria-expanded="false"
+                      data-bs-toggle="collapse"
+                      aria-controls="flush-collapseThree"
+                      class="accord ck-accord ck-arrow-3"
+                      data-bs-target="#flush-collapseThree"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                    >
+                      <path
+                        d="M2 5C2 5 7.65625 11 8 11C8.34375 11 14 5 14 5"
+                        stroke="#404040"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                    </svg>
                   </div>
                 </div>
                 <div

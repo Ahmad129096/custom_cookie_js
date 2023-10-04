@@ -287,14 +287,19 @@
 label {
   cursor: pointer;
 }
+
 .ck-accordion-header > .ck-coll {
+  width: 100%;
+}
+
+.ck-accordion-header {
   font-size: 14px;
   padding: 16px;
   align-items: center;
   justify-content: space-between;
 }
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .ck-accordion-header > .ck-coll {
+  .ck-accordion-header {
     font-size: 11px;
     padding: 9px;
   }
@@ -313,6 +318,7 @@ label {
 }
 
 .ck-siempre-label {
+  width: max-content;
   color: #000000;
   font-weight: 500;
   padding-right: 8px;
