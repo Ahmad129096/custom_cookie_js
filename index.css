@@ -259,7 +259,7 @@
   }
 }
 
-.modal-body {
+.ck-modal-body {
   width: 514px;
   height: 376px;
   overflow-y: auto;
@@ -268,20 +268,20 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .modal-body {
+  .ck-modal-body {
     padding: 9px 0px 9px 0px;
     width: 100%;
     height: 392px;
     overflow-x: hidden;
   }
 }
-.modal-body > .ck-main-text {
+.ck-modal-body > .ck-main-text {
   font-size: 14px;
   line-height: normal;
   color: #404040;
 }
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .modal-body > .ck-main-text {
+  .ck-modal-body > .ck-main-text {
     font-size: 11px;
   }
 }
