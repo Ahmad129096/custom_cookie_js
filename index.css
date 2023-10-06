@@ -1,14 +1,10 @@
+
+.ck-modal{
+
 /* Hide the default scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
-
-@media screen and (min-width: 320px) and (max-width: 600px) {
-  ::-webkit-scrollbar {
-    width: 2px;
-  }
-}
-
 /* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
@@ -29,6 +25,20 @@
 ::-webkit-scrollbar-corner {
   background: #f1f1f1;
 }
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  
+  .ck-modal{
+    ::-webkit-scrollbar {
+      width: 2px;
+    }
+  }
+}
+
+
 
 .ck-font-family {
   font-family: "Roboto", sans-serif;
@@ -48,7 +58,7 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  .modal {
+  .ck-modal {
     left: 10x;
     top: 50px;
   }
